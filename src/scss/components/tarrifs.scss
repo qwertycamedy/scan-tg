@@ -1,0 +1,207 @@
+.tarrifs {
+  color: var(--light);
+  padding-top: 105px;
+  padding-bottom: calc(57px + 180px);
+  background: linear-gradient(355.81deg, #0070fa 2.7%, #007deb 88.45%);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 17px;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__slider {
+    margin: 0 auto;
+    width: max-content;
+    &-nav {
+      display: none;
+    }
+    &-wrapper {
+      align-items: flex-end;
+    }
+    &-slide {
+      box-sizing: border-box;
+      display: flex;
+      height: 100%;
+      max-width: 345px;
+      width: 345px !important;
+      align-items: flex-end;
+
+      &:last-child {
+        margin: unset !important;
+      }
+
+      &.small {
+        height: 427px;
+      }
+
+      &.big {
+        height: 457px;
+      }
+    }
+    &-content {
+      z-index: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 15px;
+      padding: 37px 30px 30px;
+      box-shadow: 0px 4px 14px rgba(135, 161, 198, 0.1);
+      &.small {
+        color: var(--dark);
+        background: var(--light);
+        height: 427px;
+
+        .tarrifs {
+          &__slider {
+            &-back {
+              color: #f3f8fc;
+              opacity: 1;
+            }
+
+            &-price {
+              color: var(--blue);
+            }
+
+            &-subprice {
+              color: #87A1C6;
+            }
+          }
+        }
+      }
+
+      &.big {
+        background: transparent;
+        border: 3px solid #ffffff;
+        height: 457px;
+
+        .tarrifs {
+          &__slider {
+            &-list {
+              &-item {
+                &:after {
+                  background: var(--light);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-back {
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: -89px;
+      font-weight: 700;
+      font-size: 160px;
+      line-height: 205px;
+
+      color: #ffffff;
+
+      opacity: 0.08;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    &-price {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 41px;
+      text-align: center;
+
+      color: var(--orange);
+    }
+
+    &-subprice {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 24px;
+      text-align: center;
+      color: #C8DEFC;
+      & span {
+        text-decoration: line-through currentColor;
+      }
+    }
+
+    &-line {
+      width: 100%;
+      display: flex;
+      height: 1px;
+      opacity: 0.4;
+      margin-bottom: 24px;
+      border-bottom: 2px dashed var(--azure);
+    }
+
+    &-suplist {
+      margin-bottom: 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+      line-height: 21px;
+    }
+
+    &-list {
+      list-style: none;
+      font-size: 16px;
+      line-height: 21px;
+
+      &-item {
+        padding-left: 15px;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          background: var(--dark);
+          top: 50%;
+          transform: translate(0, -50%);
+          left: 0;
+        }
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      margin-top: auto;
+      box-sizing: border-box;
+      background: #FEB05F;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 200px;
+        margin-left: 50px;
+        background: #fff;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0.5) 100%
+        );
+        left: -40px;
+        top: -100px;
+        z-index: 1;
+        transform: rotate(45deg);
+        position: absolute;
+        animation: movingFlare 3s ease-in-out 0.05s infinite;
+      }
+    }
+  }
+}

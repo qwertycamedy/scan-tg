@@ -1,0 +1,118 @@
+.platform {
+  background: linear-gradient(180deg, #f0f8ff 0%, rgba(240, 248, 255, 0) 100%);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 109px;
+    padding-top: 100px;
+  }
+
+  &__line,
+  &__plane {
+    position: absolute !important;
+    pointer-events: none;
+  }
+
+  &__line {
+    &.line-1 {
+      right: calc(100% - 282px);
+      top: 92px;
+      left: unset;
+    }
+
+    &.line-2 {
+      left: calc(100% - 284px);
+      top: 42px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  &__plane {
+    object-fit: contain;
+    &.plane-1 {
+      top: -20px !important;
+      left: 59px !important;
+      width: 150px;
+      transform: rotate(-26px) !important;
+    }
+
+    &.plane-2 {
+      left: unset !important;
+      right: 72px !important;
+      top: -100px !important;
+      width: 150px;
+    }
+  }
+
+  &__card {
+    &-outer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    background: #ffffff;
+    box-shadow: 0px 4px 14px rgba(135, 161, 198, 0.1);
+    border-radius: 15px;
+    padding-top: 33px;
+    padding-left: 30px;
+    padding-bottom: 35px;
+    padding-right: 20px;
+
+    &-img {
+      margin-bottom: 25px;
+    }
+
+    &-title {
+      font-weight: 400;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 21px;
+      color: #304050;
+    }
+
+    &-item {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+
+      color: #304050;
+      padding-left: 15px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background: var(--dark);
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__btn {
+    max-width: 360px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: opacity .2s linear;
+    opacity: 0;
+    background: linear-gradient(355.81deg, #0070fa 2.7%, #007deb 88.45%);
+  }
+
+  &.active {
+    border-bottom: 1px solid rgba(185, 209, 234, 0.3);
+
+    .header__inner {
+      padding: 10px 0;
+    }
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    transition: padding .2s linear;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    grid-gap: 35px;
+
+    &-outer {
+      display: flex;
+      align-items: center;
+      grid-gap: 45px;
+    }
+
+    &-link {
+      color: var(--light);
+    }
+  }
+
+  &__btn {
+    &-outer {
+      display: flex;
+      align-items: center;
+      grid-gap: 20px;
+    }
+  }
+
+  .burger {
+    @include burger;
+  }
+}
